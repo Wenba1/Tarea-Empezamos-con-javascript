@@ -6,13 +6,23 @@
   <body>
     <h1>Sumador</h1>
     <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
+      <label for="primer-numero-suma">Primer número:</label>
+      <input type="number" id="primer-numero-suma" />
+      <label for="segundo-numero-suma">Segundo número:</label>
+      <input type="number" id="segundo-numero-suma" />
       <input type="submit" value="Sumar" id="sumar-button" />
     </form>
-    <div id="resultado-div"></div>
+    <div id="resultado-suma"></div>
+
+    <h1>Multiplicador</h1>
+    <form id="multiplicar-form">
+      <label for="primer-numero-multiplicar">Primer número:</label>
+      <input type="number" id="primer-numero-multiplicar" />
+      <label for="segundo-numero">Segundo número:</label>
+      <input type="number" id="segundo-numero-multiplicar" />
+      <input type="submit" value="Multiplicar" id="multiplicar-button" />
+    </form>
+    <div id="resultado-multiplicacion"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>

@@ -1,15 +1,32 @@
-import sumar from "./sumador";
+import sumar from "./sumador.js";
+import multiplicar from "./multiplicador.js"; // Asegúrate de crear este módulo
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+// SUMA
+const firstSum = document.querySelector("#primer-numero-suma");
+const secondSum = document.querySelector("#segundo-numero-suma");
+const sumForm = document.querySelector("#sumar-form");
+const sumResult = document.querySelector("#resultado-suma");
 
-form.addEventListener("submit", (event) => {
+sumForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const firstNumber = Number.parseInt(firstSum.value);
+  const secondNumber = Number.parseInt(secondSum.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  sumResult.innerHTML = "<p>Resultado: " + sumar(firstNumber, secondNumber) + "</p>";
+});
+
+// MULTIPLICACIÓN
+const firstMult = document.querySelector("#primer-numero-multiplicar");
+const secondMult = document.querySelector("#segundo-numero-multiplicar");
+const multForm = document.querySelector("#multiplicar-form");
+const multResult = document.querySelector("#resultado-multiplicacion");
+
+multForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const firstNumber = Number.parseInt(firstMult.value);
+  const secondNumber = Number.parseInt(secondMult.value);
+
+  multResult.innerHTML = "<p>Resultado: " + multiplicar(firstNumber, secondNumber) + "</p>";
 });
